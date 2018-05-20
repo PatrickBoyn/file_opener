@@ -1,7 +1,7 @@
 import os
 
 
-class FileOpener:
+def file_opener():
     # List all of the files you want to open here. 
     files = [
         r'E:\Steam\steamapps\common\FSX\fsx.exe',
@@ -22,4 +22,4 @@ class FileOpener:
         print(a)
 
 
-FileOpener()
+file_opener()
