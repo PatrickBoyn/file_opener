@@ -13,7 +13,6 @@ def file_opener(*args):
     # The best way of doing this is passing a list.
     def open_file(ls):
         os.startfile(ls)
-    
 
     # This is for opening all of my fsx files at once with one click.
     for a in files:
@@ -23,5 +22,6 @@ def file_opener(*args):
 
 # Put the files paths in as parameters.
 file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe',
-            r'C:\Aerosoft\FSC9\FSC.exe', r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe',
+            r'C:\Aerosoft\FSC9\FSC.exe', 
+            r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe',
             r'C:\Program Files (x86)\rcv4x\rcv4.exe')
