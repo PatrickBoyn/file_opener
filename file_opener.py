@@ -9,14 +9,9 @@ def file_opener(*args):
     for a in args:
         files.append(a)
 
-    # This function runs the files
-    # The best way of doing this is passing a list.
-    def open_file(ls):
-        os.startfile(ls)
-
     # This is for opening all of my fsx files at once with one click.
     for a in files:
-        open_file(a)
+        os.startfile(a)
         print(a)
 
 
