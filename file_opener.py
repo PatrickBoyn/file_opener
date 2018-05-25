@@ -10,9 +10,11 @@ def file_opener(*args):
         files.append(a)
 
     # This is for opening all of my fsx files at once with one click.
-    for a in files:
-        os.startfile(a)
-        print(a)
+    for b in files:
+        os.startfile(b)
+        # The print statement shows me if everything was read ok, if something
+        # isn't opening correctly for example. 
+        print(b)
 
 
 # Put the files paths in as parameters.
