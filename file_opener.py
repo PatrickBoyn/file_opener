@@ -15,6 +15,7 @@ def file_opener(*args):
         # isn't opening correctly for example. 
         print(b)
 
+
 # Put the files paths in as parameters.
 file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe',
             r'C:\Aerosoft\FSC9\FSC.exe', 
