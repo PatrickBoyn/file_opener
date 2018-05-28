@@ -1,4 +1,16 @@
-import os
+import os, sys
+from PyQt5 import QtWidgets
+
+
+class Window(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.init_ui()
+
+    def init_ui(self):
+        self.setWindowTitle('File Opener')
+        self.show()
 
 
 def file_opener(*args):
@@ -16,8 +28,12 @@ def file_opener(*args):
         print(b)
 
 
+app = QtWidgets.QApplication(sys.argv)
+a_window = Window()
+sys.exit(app.exec_())
+
 # Put the files paths in as parameters.
-file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe',
-            r'C:\Aerosoft\FSC9\FSC.exe', 
-            r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe',
-            r'C:\Program Files (x86)\rcv4x\rcv4.exe')
+# file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe',
+#             r'C:\Aerosoft\FSC9\FSC.exe', 
+#             r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe',
+#             r'C:\Program Files (x86)\rcv4x\rcv4.exe')
