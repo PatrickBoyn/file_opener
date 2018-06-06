@@ -8,6 +8,20 @@ class Window(QtWidgets.QWidget):
 
         self.init_ui()
 
+    def file_opener(self, *args):
+        # List all of the files you want to open here.
+        self.files = []
+
+        # For adding the arguments to the list.
+        for a in args:
+            self.files.append(a)
+            # This is for opening all of my fsx files at once with one click.
+            for b in self.files:
+                os.startfile(b)
+                # The print statement shows me if everything was read ok, if something
+                # isn't opening correctly for example.
+                print(b)
+
     def init_ui(self):
         self.setWindowTitle('File Opener')
         self.le = QtWidgets.QLineEdit()
@@ -22,20 +36,6 @@ class Window(QtWidgets.QWidget):
         self.setLayout(v_box)
 
         self.show()
-
-    def file_opener(self, *args):
-        # List all of the files you want to open here.
-        self.files = []
-
-        # For adding the arguments to the list.
-        for a in args:
-            self.files.append(a)
-            # This is for opening all of my fsx files at once with one click.
-            for b in self.files:
-                os.startfile(b)
-                # The print statement shows me if everything was read ok, if something
-                # isn't opening correctly for example.
-                print(b)
 
 
 app = QtWidgets.QApplication(sys.argv)
