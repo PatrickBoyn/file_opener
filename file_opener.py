@@ -10,12 +10,10 @@ class Window(QtWidgets.QWidget):
 
     def init_ui(self):
         self.setWindowTitle('File Opener')
-        self.l = QtWidgets.QLabel()
         self.le = QtWidgets.QLineEdit()
         self.b = QtWidgets.QPushButton('Open Files')
-        self.l.setText('Test')
 
-        self.b.clicked.connect(self, self.file_opener)
+        self.b.clicked.connect(self, self.file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe'))
 
         v_box = QtWidgets.QVBoxLayout()
         v_box.addWidget(self.le)
