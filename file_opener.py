@@ -13,7 +13,7 @@ class Window(QtWidgets.QWidget):
         self.le = QtWidgets.QLineEdit()
         self.b = QtWidgets.QPushButton('Open Files')
 
-        self.b.clicked.connect(self, self.file_opener(r'E:\Steam\steamapps\common\FSX\fsx.exe'))
+        self.b.clicked.connect(self.file_opener)
 
         v_box = QtWidgets.QVBoxLayout()
         v_box.addWidget(self.le)
