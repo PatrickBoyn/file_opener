@@ -44,6 +44,7 @@ def text_box(variable, index, path, row, column):
 
 # TODO simplify this so that there is no repeated code.
 def start_file():
+	test = []
 	os.startfile(text_var.get())
 	os.startfile(text_var2.get())
 	os.startfile(text_var3.get())
