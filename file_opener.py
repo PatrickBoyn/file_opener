@@ -3,6 +3,7 @@ import os
 
 root = tkinter.Tk()
 
+# TODO find a way of making this simpler.
 text_var = tkinter.StringVar()
 text_var2 = tkinter.StringVar()
 text_var3 = tkinter.StringVar()
@@ -44,7 +45,6 @@ def text_box(variable, index, path, row, column):
 	print(path)
 
 
-# TODO simplify this so that there is no repeated code.
 def start_file():
 	for i in text_variable:
 		os.startfile(i.get())
