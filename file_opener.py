@@ -5,17 +5,21 @@ root = tkinter.Tk()
 
 text_var = tkinter.StringVar()
 text_var2 = tkinter.StringVar()
+text_var3 = tkinter.StringVar()
 
-path1 = r'C:\Users\dakil\Desktop\Arabic.txt'
-path2 = r'C:\Users\dakil\Desktop\Italian.txt'
+path1 = r'E:\Steam\steamapps\common\FSX\fsx.exe'
+path2 = r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe'
+path3 = r'C:\Program Files (x86)\rcv4x\rcv4.exe'
 
 
 def main():
-	window_conf('Test.', '180x50')
+	# Window title, dimensions.
+	window_conf('File Opener', '180x70')
 
 	# Textvariable, index, path, row, column
 	text_box(text_var, 0, path1, 0, 0)
 	text_box(text_var2, 1, path2, 1, 0)
+	text_box(text_var3, 2, path3, 2, 0)
 
 	btn = tkinter.Button(text='Open', command=start_file)
 	btn.grid(row=0, column=1)
@@ -32,10 +36,13 @@ def text_box(variable, index, path, row, column):
 	box = tkinter.Entry(textvariable=variable)
 	box.insert(index, path)
 	box.grid(row=row, column=column, padx=5)
+	print(path)
+
 
 def start_file():
 	os.startfile(text_var.get())
 	os.startfile(text_var2.get())
+	os.startfile(text_var3.get())
 
 
 if __name__ == '__main__':
