@@ -1,43 +1,41 @@
-import os, sys
-from PyQt5 import QtWidgets
+import tkinter
+import os
+
+root = tkinter.Tk()
+
+text_var = tkinter.StringVar()
+text_var2 = tkinter.StringVar()
+
+path1 = r'C:\Users\dakil\Desktop\Arabic.txt'
+path2 = r'C:\Users\dakil\Desktop\French.txt'
 
 
-class Window(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
+def main():
+	window_conf('Test.', '180x50')
 
-        self.init_ui()
+	box1 = tkinter.Entry(textvariable=text_var)
+	box1.insert(0, path1)
+	box1.grid(row=0, column=0, padx=5)
 
-    def file_opener(self, *args):
-        # List all of the files you want to open here.
-        self.files = []
+	box2 = tkinter.Entry(textvariable=text_var2)
+	box2.insert(0, path2)
+	box2.grid(row=1, column=0, padx=5)
 
-        # For adding the arguments to the list.
-        for a in args:
-            self.files.append(a)
-            # This is for opening all of my fsx files at once with one click.
-            for b in self.files:
-                os.startfile(b)
-                # The print statement shows me if everything was read ok, if something
-                # isn't opening correctly for example.
-                print(b)
+	btn = tkinter.Button(text='Open', command=start_file)
+	btn.grid(row=0, column=1, sticky='w')
 
-    def init_ui(self):
-        self.setWindowTitle('File Opener')
-        self.le = QtWidgets.QLineEdit()
-        self.b = QtWidgets.QPushButton('Open Files')
-
-        self.b.clicked.connect(self.file_opener)
-
-        v_box = QtWidgets.QVBoxLayout()
-        v_box.addWidget(self.le)
-        v_box.addWidget(self.b)
-
-        self.setLayout(v_box)
-
-        self.show()
+	root.mainloop()
 
 
-app = QtWidgets.QApplication(sys.argv)
-a_window = Window()
-sys.exit(app.exec_())
+def window_conf(title, geometry):
+	root.title(title)
+	root.geometry(geometry)
+
+
+def start_file():
+	os.startfile(text_var.get())
+	os.startfile(text_var2.get())
+
+
+if __name__ == '__main__':
+	main()
