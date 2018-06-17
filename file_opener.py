@@ -7,6 +7,9 @@ text_var = tkinter.StringVar()
 text_var2 = tkinter.StringVar()
 text_var3 = tkinter.StringVar()
 
+# This is hard coded because these are the main ones
+# I will use with this program. I wanted a GUI for easy change if I wanted to add,
+# or change these files in the future.
 path1 = r'E:\Steam\steamapps\common\FSX\fsx.exe'
 path2 = r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe'
 path3 = r'C:\Program Files (x86)\rcv4x\rcv4.exe'
@@ -39,6 +42,7 @@ def text_box(variable, index, path, row, column):
 	print(path)
 
 
+# TODO simplify this so that there is no repeated code.
 def start_file():
 	os.startfile(text_var.get())
 	os.startfile(text_var2.get())
