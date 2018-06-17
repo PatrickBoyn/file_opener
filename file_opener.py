@@ -7,7 +7,7 @@ text_var = tkinter.StringVar()
 text_var2 = tkinter.StringVar()
 text_var3 = tkinter.StringVar()
 
-test = [text_var, text_var2, text_var3]
+text_variable = [text_var, text_var2, text_var3]
 
 # This is hard coded because these are the main ones
 # I will use with this program. I wanted a GUI for easy change if I wanted to add,
@@ -46,7 +46,7 @@ def text_box(variable, index, path, row, column):
 
 # TODO simplify this so that there is no repeated code.
 def start_file():
-	for i in test:
+	for i in text_variable:
 		os.startfile(i.get())
 
 
