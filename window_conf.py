@@ -27,3 +27,8 @@ def text_box(variable, index, path, row, column):
 	box.insert(index, path)
 	box.grid(row=row, column=column, padx=5)
 	print(path)
+
+
+def button(text, row, column, command):
+	btn = tkinter.Button(text=text, command=command)
+	btn.grid(row=row, column=column)
