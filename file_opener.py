@@ -1,5 +1,7 @@
-import os
+# It's bad practice to import *, but I think it's ok
+# in this case since it's such a small file.
 from window_conf import *
+import startup
 
 
 def main():
@@ -11,15 +13,9 @@ def main():
 	text_box(text_var2, 1, path2, 1, 0)
 	text_box(text_var3, 2, path3, 2, 0)
 
-	btn = tkinter.Button(text='Open', command=start_file)
-	btn.grid(row=0, column=1)
+	button('Open', 0, 1, startup.start_file)
 
 	root.mainloop()
-
-
-def start_file():
-	for i in text_variable:
-		os.startfile(i.get())
 
 
 if __name__ == '__main__':
