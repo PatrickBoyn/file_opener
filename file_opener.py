@@ -1,6 +1,6 @@
 import window_conf
 from window_conf import (text_var, text_var2, text_var3,
-                         path1, path2, path3)
+                         path1, path2, path3, root)
 import startup
 
 
@@ -14,8 +14,9 @@ def main():
 	window_conf.text_box(text_var3, 2, path3, 2, 0)
 
 	window_conf.button('Open', 0, 1, startup.start_file)
+	window_conf.button('Add', 1, 1)
 
-	window_conf.root.mainloop()
+	root.mainloop()
 
 
 if __name__ == '__main__':
