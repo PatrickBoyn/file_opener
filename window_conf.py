@@ -18,6 +18,7 @@ path3 = r'C:\Program Files (x86)\rcv4x\rcv4.exe'
 
 paths = [path1, path2, path3]
 
+
 def window_conf(title, geometry):
 	root.title(title)
 	root.geometry(geometry)
@@ -33,3 +34,7 @@ def text_box(variable, index, path, row, column):
 def button(text, row, column, command=None):
 	btn = tkinter.Button(text=text, command=command)
 	btn.grid(row=row, column=column)
+
+
+def add_text_box():
+	pass
