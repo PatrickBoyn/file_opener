@@ -12,8 +12,8 @@ text_variable = [text_var, text_var2, text_var3]
 # This is hard coded because these are the main ones
 # I will use with this program. I wanted a GUI for easy change if I wanted to add,
 # or change these files in the future.
-path1 = r'E:\Steam\steamapps\common\FSX\fsx.exe'
-path2 = r'C:\Program Files (x86)\HiFi\AS16_FSX\AS16.exe'
+path1 = r'C:\Users\dakil\Desktop\Italian.txt'
+path2 = r'C:\Users\dakil\Desktop\test.txt'
 path3 = r'C:\Program Files (x86)\rcv4x\rcv4.exe'
 
 
