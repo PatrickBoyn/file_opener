@@ -16,6 +16,7 @@ path1 = r'C:\Users\dakil\Desktop\Italian.txt'
 path2 = r'C:\Users\dakil\Desktop\test.txt'
 path3 = r'C:\Program Files (x86)\rcv4x\rcv4.exe'
 
+paths = [path1, path2, path3]
 
 def window_conf(title, geometry):
 	root.title(title)
