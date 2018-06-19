@@ -29,6 +29,6 @@ def text_box(variable, index, path, row, column):
 	print(path)
 
 
-def button(text, row, column, command):
+def button(text, row, column, command=None):
 	btn = tkinter.Button(text=text, command=command)
 	btn.grid(row=row, column=column)
